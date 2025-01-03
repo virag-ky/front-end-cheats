@@ -2,4 +2,48 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgb(90, 43, 233), rgb(33, 15, 93));
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #d5d6ff;
+  color: #210f5d;
+}
+
+.app-name-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.app-name-container img {
+  width: 25px;
+}
+
+.app-name {
+  font-weight: 500;
+}
+
+/* Header */
+header {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
 }

@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(180deg, rgb(90, 43, 233), rgb(33, 15, 93));
+  background: linear-gradient(180deg, rgb(59, 55, 117), rgb(33, 5, 83));
   background-repeat: no-repeat;
   color: #fff;
 }
@@ -39,11 +39,38 @@ nav {
 header {
   height: 50vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2.5rem;
   padding: 1rem;
 }
 
 h1 {
   text-align: center;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+search {
+  width: 100%;
+}
+
+search input {
+  border: none;
+  border-radius: 2rem;
+  padding: 0.8rem;
+  outline: none;
+  width: 100%;
+}
+
+.search-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
 }

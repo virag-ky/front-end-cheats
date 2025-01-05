@@ -17,7 +17,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background: #d5d6ff;
+  background: #fff;
   color: #210f5d;
 }
 
@@ -73,4 +73,30 @@ search input {
 .search-icon {
   font-size: 1.8rem;
   cursor: pointer;
+}
+
+/* Main/Cheat Sheets */
+main {
+  padding: 1rem;
+}
+
+.cheatsheet-container {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cheatsheet {
+  background: #ab9bff;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.cheatsheet-container img {
+  width: 50%;
 }

@@ -6,7 +6,7 @@ import { FaBluesky } from "react-icons/fa6";
 function Footer() {
   return (
     <footer>
-      <div>
+      <div className="footer-section">
         <p>
           🛠️ Built by{" "}
           <a href="https://github.com/virag-ky" target="_blank">
@@ -28,7 +28,7 @@ function Footer() {
           </a>
         </div>
       </div>
-      <div>
+      <div className="footer-section">
         <p>
           For any feedback, please leave a message here:{" "}
           <a href="mailto:vkormoczy@gmail.com">vkormoczy@gmail.com</a>.

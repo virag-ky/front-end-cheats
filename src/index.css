@@ -135,7 +135,7 @@ footer {
   margin-top: 10rem;
 }
 
-footer div {
+footer div.footer-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,6 +156,7 @@ footer a {
 }
 
 footer div.social-icons {
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   gap: 1rem;
@@ -164,11 +165,11 @@ footer div.social-icons {
 
 /* Buy me a coffee */
 a.coffee {
-  margin-top: 1rem;
   width: max-content;
 }
 
 a.coffee button {
+  margin-top: 1rem;
   cursor: pointer;
   padding: 0.5rem 0.8rem;
   border: none;
@@ -182,4 +183,10 @@ a.coffee button {
 a.coffee button:hover {
   background: #cbc8f9;
   color: #210f5d;
+}
+
+@media (max-width: 700px) {
+  footer {
+    flex-direction: column;
+  }
 }

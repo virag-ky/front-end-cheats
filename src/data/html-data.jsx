@@ -253,4 +253,319 @@ or
 </ul>`,
     id: 5,
   },
+  {
+    title: "Tables",
+    text: `<!-- Basic Table -->
+<table>
+    <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+    </tr>
+    <tr>
+        <td>Row 1, Cell 1</td>
+        <td>Row 1, Cell 2</td>
+    </tr>
+    <tr>
+        <td>Row 2, Cell 1</td>
+        <td>Row 2, Cell 2</td>
+    </tr>
+</table>
+
+<!-- Table with Row and Column Span -->
+<table>
+    <tr>
+        <th colspan="2">Header Spanning Two Columns</th>
+    </tr>
+    <tr>
+        <td rowspan="2">Cell Spanning Two Rows</td>
+        <td>Cell A</td>
+    </tr>
+    <tr>
+        <td>Cell B</td>
+    </tr>
+</table>
+
+<!-- Table with Border -->
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Alice</td>
+        <td>25</td>
+    </tr>
+</table>
+
+<!-- Table Caption -->
+<table>
+    <caption>Population by Country</caption>
+    <tr>
+        <th>Country</th>
+        <th>Population</th>
+    </tr>
+    <tr>
+        <td>USA</td>
+        <td>331 million</td>
+    </tr>
+</table>
+
+<!-- Table with Header, Body, and Footer -->
+<table>
+    <thead>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Body Row 1, Cell 1</td>
+            <td>Body Row 1, Cell 2</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Footer 1</td>
+            <td>Footer 2</td>
+        </tr>
+    </tfoot>
+</table>
+`,
+    language: "html",
+    keypoints: `<ul>
+    <li><strong>Basic Structure:</strong> Use <code>&lt;table&gt;</code> for tables, <code>&lt;tr&gt;</code> for rows, <code>&lt;th&gt;</code> for headers, and <code>&lt;td&gt;</code> for data cells.</li>
+    <li><strong>Row and Column Span:</strong> Merge cells with <code>colspan</code> for columns and <code>rowspan</code> for rows.</li>
+    <li><strong>Border Attribute:</strong> Add a simple border with <code>border="1"</code>, though this is outdated; CSS is preferred for styling.</li>
+    <li><strong>Caption:</strong> Describe the table with <code>&lt;caption&gt;&lt;/caption&gt;</code>.</li>
+    <li><strong>Semantic Sections:</strong> Use <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code> for table structure readability.</li>
+    <li><strong>Styling Tables:</strong> Apply CSS for appearance, either inline or externally, for color, borders, widths, etc.</li>
+</ul>`,
+    id: 6,
+  },
+  {
+    title: "Forms - Basic Form",
+    text: `<!-- Basic Form -->
+<form action="#" method="get">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Form with Placeholder and Required -->
+<form action="#">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+    <input type="submit" value="Submit">
+</form>
+
+<!-- Form with Button and Reset -->
+<form action="#">
+    <label for="search">Search:</label>
+    <input type="text" id="search" name="search"><br><br>
+    <button type="submit">Search</button>
+    <button type="reset">Reset</button>
+</form>
+`,
+    language: "html",
+    keypoints: `<ul>
+    <li><strong>Basic Form Structure:</strong> Use <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, and submit buttons.</li>
+    <li><strong>Action Attribute:</strong> The <code>action</code> attribute in the <code>&lt;form&gt;</code> tag specifies where to send the form data when submitted, typically a URL or a server script.</li>
+    <li><strong>Placeholders & Required:</strong> Use <code>placeholder</code> for hints and <code>required</code> for mandatory fields.</li>
+    <li><strong>Buttons:</strong> Use <code>&lt;button&gt;</code> for submit and reset actions.</li>
+    </ul>`,
+    id: 7,
+  },
+  {
+    title: "Forms - Radio Buttons",
+    text: `<!-- Radio Buttons -->
+<form action="#">
+    <p>Choose your favorite:</p>
+    <label><input type="radio" name="favorite" value="apple"> Apple</label>
+    <label><input type="radio" name="favorite" value="banana"> Banana</label>
+    <input type="submit" value="Submit">
+</form>
+`,
+    language: "html",
+    keypoints: `
+    <ul><li><strong>Radio Buttons:</strong> Group choices with <code>&lt;input type="radio"&gt;</code> for single selection.</li></ul>`,
+    id: 8,
+  },
+  {
+    title: "Forms - Checkboxes",
+    text: `<!-- Checkboxes -->
+<form action="#">
+    <p>Select your interests:</p>
+    <label><input type="checkbox" name="interest" value="coding"> Coding</label>
+    <label><input type="checkbox" name="interest" value="music"> Music</label>
+    <input type="submit" value="Submit">
+</form>`,
+    language: "html",
+    keypoints: `<ul><li><strong>Checkboxes:</strong> Allow multiple selections with <code>&lt;input type="checkbox"&gt;</code>.</li></ul>`,
+    id: 9,
+  },
+  {
+    title: "Forms - Select Dropdown",
+    text: `<!-- Select Dropdown -->
+<form action="#">
+    <label for="country">Choose a country:</label>
+    <select id="country" name="country">
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option>
+    </select>
+    <input type="submit" value="Submit">
+</form>
+`,
+    language: "html",
+    keypoints: `<ul><li><strong>Select Dropdown:</strong> Create drop-down menus with <code>&lt;select&gt;</code> and <code>&lt;option&gt;</code>.</li></ul>`,
+    id: 10,
+  },
+  {
+    title: "Forms - Textarea",
+    text: `<!-- Textarea -->
+<form action="#">
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+    <input type="submit" value="Submit">
+</form>`,
+    language: "html",
+    keypoints: `<ul><li><strong>Textarea:</strong> Provide space for longer text input using <code>&lt;textarea&gt;</code>.</li></ul>`,
+    id: 11,
+  },
+  {
+    title: "Forms - Multiple Input Types",
+    text: `<!-- Multiple Input Types -->
+<form action="#">
+    <label for="number">Number:</label>
+    <input type="number" id="number" name="number" min="1" max="10">
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
+    <label for="range">Range:</label>
+    <input type="range" id="range" name="range" min="0" max="100">
+    <label for="color">Color:</label>
+    <input type="color" id="color" name="color">
+    <input type="submit" value="Submit">
+</form>`,
+    language: "html",
+    keypoints: `<ul> <li><strong>Varied Input Types:</strong> Include <code>number</code>, <code>date</code>, <code>range</code>, and <code>color</code> for specialized inputs.</li></ul>`,
+    id: 12,
+  },
+  {
+    title: "Forms - File Upload",
+    text: `<!-- File Upload -->
+<form action="#" method="post" enctype="multipart/form-data">
+    <label for="file">Upload a file:</label>
+    <input type="file" id="file" name="file"><br><br>
+    <input type="submit" value="Submit">
+</form>`,
+    language: "html",
+    keypoints: `<ul><li><strong>File Upload:</strong> Use <code>&lt;input type="file"&gt;</code> with <code>enctype="multipart/form-data"</code> in the form.</li></ul>`,
+    id: 13,
+  },
+  {
+    title: "Line Break - Horizontal Rule",
+    text: `<!-- Basic Line Break -->
+<p>This is the first line.<br>This is the second line.</p>
+
+<!-- Multiple Line Breaks -->
+<p>This is the first paragraph.<br><br><br>This is the third paragraph.</p>
+
+<!-- Horizontal Rule -->
+<hr>
+
+<!-- Horizontal Rule with Attributes -->
+<hr width="50%" size="3" color="red">
+
+<!-- Combining br and hr -->
+<p>Here's some text.<br>
+    <hr>
+    And here's more text after a line break and a horizontal rule.
+</p>
+`,
+    language: "html",
+    keypoints: `<ul>
+    <li><strong>Line Break <code>&lt;br&gt;</code>:</strong> Adds a single line break in the text flow, for new lines without paragraph separation.</li>
+    <li><strong>Multiple <code>&lt;br&gt;</code>s:</strong> Can be used consecutively to create more vertical space.</li>
+    <li><strong>Horizontal Rule <code>&lt;hr&gt;</code>:</strong> Creates a thematic break or a line in the document, visually separating content.</li>
+    <li><strong>HR Attributes:</strong> Although less common now, <code>&lt;hr&gt;</code> can use attributes like <code>width</code>, <code>size</code>, and <code>color</code> for basic styling. CSS is preferred for modern use.</li>
+</ul>`,
+    id: 14,
+  },
+  {
+    title: "Div (Division Element)",
+    text: `<!-- Basic Div Usage -->
+<div class="box">
+    This is a simple <div> for block-level content.
+</div>
+
+<!-- Div with Class for Styling -->
+<div class="box blue-background">
+    This div uses a class for background color styling.
+</div>
+
+<!-- Div with ID -->
+<div id="unique-div" class="box">
+    This div has an ID for unique targeting or JavaScript interaction.
+</div>
+
+<!-- Nested Divs -->
+<div class="box">
+    <div>First nested div.</div>
+    <div>Second nested div.</div>
+</div>
+
+<!-- Div for Sectioning Content -->
+<div class="box">
+    <h3>Section Title</h3>
+    <p>This div groups related content into a section.</p>
+</div>
+`,
+    language: "html",
+    keypoints: `<ul>
+    <li><strong>Block-Level Container:</strong> <code>&lt;div&gt;</code> is used for block-level layout, creating new lines before and after itself.</li>
+    <li><strong>Styling:</strong> Easily styled with CSS through classes or IDs for layout, borders, backgrounds, etc.</li>
+    <li><strong>Unique Targeting:</strong> Use <code>id</code> for uniquely identifying a div for specific CSS or JavaScript actions.</li>
+    <li><strong>Nesting:</strong> Can contain other <code>&lt;div&gt;</code>s or elements, useful for nested or complex structures.</li>
+    <li><strong>Semantic Container:</strong> While not inherently semantic, it can group related content when no specific semantic element exists.</li>
+    <li><strong>Generic Use:</strong> A go-to when you need a non-semantic container for custom layouts or when no more specific HTML5 element fits the context.</li>
+</ul>`,
+    id: 15,
+  },
+  {
+    title: "Span",
+    text: `<!-- Basic Span Usage -->
+<p>This is a paragraph with some <span>inline text</span>.</p>
+
+<!-- Span for Styling -->
+<p>Here's a <span class="highlight">highlighted</span> word for emphasis.</p>
+
+<!-- Span for Semantic Meaning -->
+<p>Here, <span lang="fr">Bonjour</span> is French for "Hello".</p>
+
+<!-- Span for Errors or Warnings -->
+<p>Input <span class="error">error</span> detected.</p>
+
+<!-- Span for Size Adjustment -->
+<p>This sentence has <span class="small-text">smaller text</span> within it.</p>
+
+<!-- Multiple Spans for Different Effects -->
+<p>This <span class="highlight">highlighted</span> <span class="small-text">small</span> <span class="error">error</span> demonstrates multiple spans.</p>
+
+<!-- Span with Title for Tooltip -->
+<p>Hover over this <span title="This is a tooltip">text</span> for a tooltip.</p>
+
+`,
+    language: "html",
+    keypoints: `<ul>
+    <li><strong>Inline Element:</strong> <code>&lt;span&gt;</code> is used for inline content, affecting only the text it wraps without breaking the flow.</li>
+    <li><strong>Styling:</strong> Ideal for applying CSS to small segments of text for effects like color, size, or background changes.</li>
+    <li><strong>Semantic Use:</strong> Can denote language changes, technical terms, or other inline semantic distinctions using attributes like <code>lang</code>.</li>
+    <li><strong>Error/Warning:</strong> Useful for highlighting errors or warnings within text.</li>
+    <li><strong>Tooltips:</strong> The <code>title</code> attribute can be used for providing additional info on hover.</li>
+</ul>`,
+    id: 16,
+  },
 ];

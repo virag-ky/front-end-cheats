@@ -122,3 +122,64 @@ main {
 .secondary-list {
   margin-left: 1.5rem;
 }
+
+/* Footer */
+footer {
+  background: #fff;
+  color: #2d2b57;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 4rem 1rem;
+  height: 500px;
+  margin-top: 10rem;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 300px;
+}
+
+footer p {
+  margin: 1rem 0 0.5rem 0;
+}
+
+footer li {
+  margin-left: 1.5rem;
+}
+
+footer a {
+  color: #210f5d;
+  font-weight: 700;
+}
+
+footer div.social-icons {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Buy me a coffee */
+a.coffee {
+  margin-top: 1rem;
+  width: max-content;
+}
+
+a.coffee button {
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #210f5d;
+  color: #fff;
+  font-size: 1rem;
+  transition: 0.5s;
+}
+
+a.coffee button:hover {
+  background: #cbc8f9;
+  color: #210f5d;
+}

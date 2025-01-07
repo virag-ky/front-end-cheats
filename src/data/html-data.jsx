@@ -142,21 +142,21 @@ or
   },
   {
     title: "Lists",
-    text: `<h2>Unordered List (Bullets)</h2>
+    text: `<!-- Unordered List (Bullets) -->
 <ul>
     <li>Item 1</li>
     <li>Item 2</li>
     <li>Item 3</li>
 </ul>
 
-<h2>Ordered List (Numbers)</h2>
+<!-- Ordered List (Numbers) -->
 <ol>
     <li>First Item</li>
     <li>Second Item</li>
     <li>Third Item</li>
 </ol>
 
-<h2>Description List</h2>
+<!-- Description List -->
 <dl>
     <dt>Term 1</dt>
     <dd>Description of Term 1</dd>
@@ -164,7 +164,7 @@ or
     <dd>Description of Term 2</dd>
 </dl>
 
-<h2>Nested Lists</h2>
+<!-- Nested Lists -->
 <ul>
     <li>Parent Item
         <ul>
@@ -175,7 +175,7 @@ or
     <li>Another Parent Item</li>
 </ul>
 
-<h2>Custom Bullet Points</h2>
+<!-- Custom Bullet Points -->
 <ul style="list-style-type: square;">
     <li>Square Bullet</li>
 </ul>
@@ -186,7 +186,7 @@ or
     <li>No Bullet</li>
 </ul>
 
-<h2>Custom Numbering</h2>
+<!-- Custom Numbering -->
 <ol type="A">
     <li>Capital Letters</li>
     <li>Next Letter</li>
@@ -206,5 +206,51 @@ or
     <li><strong>List Styling:</strong> While HTML provides basic list structures, CSS is often used for advanced styling of lists.</li>
 </ul>`,
     id: 4,
+  },
+  {
+    title: "Links",
+    text: `<!-- Basic Hyperlink -->
+<a href="https://example.com">Visit Example.com</a>
+
+<!-- Link to Local File -->
+<a href="documents/myfile.pdf">Download PDF</a>
+
+<!-- Link to Another Page in the Same Site -->
+<a href="/about.html">About Us</a>
+
+<!-- Email Link -->
+<a href="mailto:info@example.com">Email Us</a>
+
+<!-- Telephone Link -->
+<a href="tel:+1234567890">Call Us</a>
+
+<!-- Link with Title Attribute -->
+<a href="https://example.com" title="Visit our homepage">Home</a>
+
+<!-- Opening Link in New Tab/Window -->
+<a href="https://example.com" target="_blank">Open in New Tab</a>
+
+<!-- Link to a Specific Part of the Page -->
+<p id="top">This is the top of the page.</p>
+<a href="#bottom">Go to Bottom</a>
+<p id="bottom" style="margin-top: 1000px;">This is the bottom of the page.</p>
+<a href="#top">Back to Top</a>
+
+<!-- Download Link -->
+<a href="images/picture.jpg" download="cool-picture">Download Image</a>
+`,
+    language: "html",
+    keypoints: `<ul>
+    <li><strong>Basic Hyperlink:</strong> Use <code>&lt;a href="URL"&gt;Text&lt;/a&gt;</code> to link to external sites.</li>
+    <li><strong>Local File:</strong> Link to local files with <code>&lt;a href="path/to/file"&gt;Text&lt;/a&gt;</code>.</li>
+    <li><strong>Same Site Navigation:</strong> Navigate within your site using <code>&lt;a href="/page.html"&gt;Text&lt;/a&gt;</code>.</li>
+    <li><strong>Email Link:</strong> Use <code>&lt;a href="mailto:email@example.com"&gt;Text&lt;/a&gt;</code> to create email links.</li>
+    <li><strong>Telephone Link:</strong> Create phone number links with <code>&lt;a href="tel:+1234567890"&gt;Text&lt;/a&gt;</code>.</li>
+    <li><strong>Title Attribute:</strong> Provide extra info on hover with <code>title</code>, e.g., <code>&lt;a href="URL" title="Info"&gt;Text&lt;/a&gt;</code>.</li>
+    <li><strong>New Tab/Window:</strong> Open links in new tabs with <code>target="_blank"</code>, like <code>&lt;a href="URL" target="_blank"&gt;Text&lt;/a&gt;</code>.</li>
+    <li><strong>Anchor Links:</strong> Link within a page using IDs, e.g., <code>&lt;a href="#section"&gt;Text&lt;/a&gt;</code> and <code>&lt;p id="section"&gt;</code>.</li>
+    <li><strong>Download Link:</strong> Force a download with <code>download</code>, like <code>&lt;a href="URL" download="filename"&gt;Text&lt;/a&gt;</code>.</li>
+</ul>`,
+    id: 5,
   },
 ];

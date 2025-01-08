@@ -28,6 +28,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  cursor: pointer;
 }
 
 .app-name-container img {
@@ -183,6 +184,12 @@ a.coffee button {
 a.coffee button:hover {
   background: #cbc8f9;
   color: #210f5d;
+}
+
+@media (max-width: 700px) {
+  .cheatsheet {
+    border-width: 1.2rem;
+  }
 }
 
 @media (max-width: 700px) {

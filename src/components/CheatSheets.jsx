@@ -2,12 +2,12 @@
 
 import CheatSheet from "./CheatSheet";
 
-function CheatSheets({ language, cheatsheets }) {
+function CheatSheets({ cheatsheets }) {
   return (
     <main>
       <div className="cheatsheet-container">
         {cheatsheets.map((sheet) => (
-          <CheatSheet key={sheet.id} sheet={sheet} language={language} />
+          <CheatSheet key={sheet.id} sheet={sheet} />
         ))}
       </div>
     </main>

@@ -104,7 +104,8 @@ search input {
   transition: 0.5s;
 }
 
-.languages-container button:hover {
+.languages-container button:hover,
+.languages-container button.selected {
   background: #ab9bff;
   color: #210f5d;
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import CheatSheets from "./components/CheatSheets";
@@ -10,25 +10,59 @@ import { react } from "./data/react-data";
 
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState("html");
-  let cheatsheets = html;
+  const [searchTerm, setSearchTerm] = useState("");
+  const [cheatsheets, setCheatSheets] = useState(html);
+
+  function handleSearch(val) {
+    const sanitizedVal = val.replace(/[^a-zA-Z\s]/g, "");
+    setSearchTerm(sanitizedVal);
+    setSelectedLanguage("");
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (searchTerm.trim() === "") {
+      setSelectedLanguage("html");
+      return;
+    }
+
+    const normalizedSearch = searchTerm.toLowerCase();
+    const searchWords = normalizedSearch.split(/\s+/);
+
+    const languages = [...html, ...css, ...javascript, ...react];
+    setCheatSheets(
+      languages.filter((language) =>
+        searchWords.some(
+          (word) =>
+            language.title.toLowerCase().includes(word) ||
+            language.language.toLowerCase().includes(word)
+        )
+      )
+    );
+  }
 
   function handleSelectedLanguage(val) {
     setSelectedLanguage(val);
   }
 
-  if (selectedLanguage === "html") cheatsheets = html;
-
-  if (selectedLanguage === "css") cheatsheets = css;
-
-  if (selectedLanguage === "javascript") cheatsheets = javascript;
-
-  if (selectedLanguage === "react") cheatsheets = react;
+  useEffect(() => {
+    if (selectedLanguage === "html") setCheatSheets(() => html);
+    if (selectedLanguage === "css") setCheatSheets(() => css);
+    if (selectedLanguage === "javascript") setCheatSheets(() => javascript);
+    if (selectedLanguage === "react") setCheatSheets(() => react);
+  }, [selectedLanguage]);
 
   return (
     <>
       <Navbar />
-      <Header onSelectLanguage={handleSelectedLanguage} />
-      <CheatSheets language={selectedLanguage} cheatsheets={cheatsheets} />
+      <Header
+        onSubmit={handleSubmit}
+        onSelectLanguage={handleSelectedLanguage}
+        selectedLanguage={selectedLanguage}
+        onSearch={handleSearch}
+        searchTerm={searchTerm}
+      />
+      <CheatSheets cheatsheets={cheatsheets} />
       <Footer />
     </>
   );

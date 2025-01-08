@@ -79,6 +79,36 @@ search input {
   cursor: pointer;
 }
 
+.languages-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.languages-container button {
+  cursor: pointer;
+  background: #210f5d;
+  color: #ab9bff;
+  border: 2px solid #ab9bff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 2rem;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-size: 1rem;
+  transition: 0.5s;
+}
+
+.languages-container button:hover {
+  background: #ab9bff;
+  color: #210f5d;
+}
+
 /* Main/Cheat Sheets */
 main {
   padding: 1rem;

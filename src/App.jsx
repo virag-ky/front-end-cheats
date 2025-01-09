@@ -39,6 +39,7 @@ function App() {
         )
       )
     );
+    setSearchTerm("");
   }
 
   function handleSelectedLanguage(val) {

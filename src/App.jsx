@@ -32,7 +32,7 @@ function App() {
     const languages = [...html, ...css, ...javascript, ...react];
     setCheatSheets(
       languages.filter((language) =>
-        searchWords.some(
+        searchWords.every(
           (word) =>
             language.title.toLowerCase().includes(word) ||
             language.language.toLowerCase().includes(word)

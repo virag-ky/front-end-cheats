@@ -120,12 +120,12 @@ main {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .cheatsheet {
   background: #2d2b57;
-  border: 2.5rem solid #ab9bff;
+  border: 1.2rem solid #ab9bff;
   padding: 2rem;
   border-radius: 1rem;
   max-width: 650px;

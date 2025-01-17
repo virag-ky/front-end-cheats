@@ -31,13 +31,14 @@ function App() {
 
     const languages = [...html, ...css, ...javascript, ...react];
     setCheatSheets(
-      languages.filter((language) =>
-        searchWords.every(
+      languages.filter((language) => {
+        const languageTitle = language.title.toLowerCase();
+        const languageLanguage = language.language.toLowerCase();
+        return searchWords.some(
           (word) =>
-            language.title.toLowerCase().includes(word) ||
-            language.language.toLowerCase().includes(word)
-        )
-      )
+            languageTitle.includes(word) || languageLanguage.includes(word)
+        );
+      })
     );
     setSearchTerm("");
   }

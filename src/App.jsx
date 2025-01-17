@@ -30,15 +30,11 @@ function App() {
     const normalizedSearch = searchTerm.toLowerCase();
     const searchWords = normalizedSearch.split(/\s+/);
 
-    const languages = [...html, ...css, ...javascript, ...react];
+    const languages = [...html, ...css, ...javascript, ...react, ...git];
     setCheatSheets(
       languages.filter((language) => {
         const languageTitle = language.title.toLowerCase();
-        const languageLanguage = language.language.toLowerCase();
-        return searchWords.some(
-          (word) =>
-            languageTitle.includes(word) || languageLanguage.includes(word)
-        );
+        return searchWords.some((word) => languageTitle.includes(word));
       })
     );
     setSearchTerm("");

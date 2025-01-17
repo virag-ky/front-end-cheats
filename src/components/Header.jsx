@@ -24,7 +24,7 @@ function Header({
             id="search"
             value={searchTerm}
             onChange={(e) => onSearch(e.target.value)}
-            placeholder="Search topics..."
+            placeholder="Search keywords (objects, animation, forms, ...)"
           />
         </search>
         <IoSearchSharp className="search-icon" />

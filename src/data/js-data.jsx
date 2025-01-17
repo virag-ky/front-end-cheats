@@ -2631,7 +2631,7 @@ console.log(matchNamed.groups.year); // Output: "2023"`,
         </ul>
     </li>
     <li><strong>Quantifiers:</strong>
-        <ul>
+        <ul className="secondary-list">
             <li><code>?</code> - Zero or one.</li>
             <li><code>*</code> - Zero or more.</li>
             <li><code>+</code> - One or more.</li>
@@ -2658,7 +2658,9 @@ console.log(matchNamed.groups.year); // Output: "2023"`,
             <li><code>(?=...)</code> - Positive lookahead.</li>
             <li><code>(?!...)</code> - Negative lookahead.</li>
             <li><code>(?<=...)</code> - Positive lookbehind (ES2018+).</li>
-            <li><code>(?<!...)</code> - Negative lookbehind (ES2018+).</li>
+            <li>
+            <code>(?&lt;!...)</code>
+            - Negative lookbehind (ES2018+).</li>
         </ul>
     </li>
     <li><strong>Regex Methods:</strong>

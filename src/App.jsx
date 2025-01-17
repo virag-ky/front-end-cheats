@@ -7,6 +7,7 @@ import { html } from "./data/html-data";
 import { css } from "./data/css-data";
 import { javascript } from "./data/js-data";
 import { react } from "./data/react-data";
+import { git } from "./data/git-data";
 
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState("html");
@@ -52,6 +53,7 @@ function App() {
     if (selectedLanguage === "css") setCheatSheets(() => css);
     if (selectedLanguage === "javascript") setCheatSheets(() => javascript);
     if (selectedLanguage === "react") setCheatSheets(() => react);
+    if (selectedLanguage === "git") setCheatSheets(() => git);
   }, [selectedLanguage]);
 
   return (

@@ -4,6 +4,7 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaJsSquare } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa";
 
 function Header({
   onSelectLanguage,
@@ -52,6 +53,12 @@ function Header({
           onClick={() => onSelectLanguage("react")}
         >
           <FaReact size={25} /> React
+        </button>
+        <button
+          className={selectedLanguage === "git" ? "selected" : ""}
+          onClick={() => onSelectLanguage("git")}
+        >
+          <FaGitAlt size={25} /> Git
         </button>
       </div>
     </header>

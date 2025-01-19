@@ -201,13 +201,13 @@ footer div.social-icons {
   margin-top: 10rem;
 }
 
-.indieboost-wrapper #indieboosting-container {
+.indieboost-wrapper .indieboosting {
   color: #210f5d;
   width: 100%;
   max-width: 1000px;
 }
 
-.indieboost-wrapper #indieboosting-container .grid {
+.indieboost-wrapper .indieboosting .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
@@ -215,7 +215,7 @@ footer div.social-icons {
   margin: 1.5rem 0;
 }
 
-.indieboost-wrapper #indieboosting-container .grid .indieboosting-product {
+.indieboost-wrapper .indieboosting .grid > .flex {
   width: 100%;
   color: #210f5d;
   border: 0.15rem solid #efefef;
@@ -225,32 +225,21 @@ footer div.social-icons {
   transition: 0.5s;
 }
 
-.indieboost-wrapper
-  #indieboosting-container
-  .grid
-  .indieboosting-product:hover {
+.indieboost-wrapper .indieboosting .grid > .flex:hover {
   transform: scale(1.05);
   box-shadow: 0 0 1.5rem #d6d6d6;
 }
 
-.indieboost-wrapper #indieboosting-container .grid .indieboosting-product img {
+.indieboost-wrapper .indieboosting .grid .flex img {
   width: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
-.indieboost-wrapper
-  #indieboosting-container
-  .grid
-  .indieboosting-product
-  .text-base {
+.indieboost-wrapper .indieboosting .grid .flex .text-base {
   font-weight: 700;
 }
 
-.indieboost-wrapper
-  #indieboosting-container
-  .grid
-  .indieboosting-product
-  .text-sm {
+.indieboost-wrapper .indieboosting .grid .flex .text-sm {
   font-size: 0.8rem;
 }
 

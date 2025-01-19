@@ -9,6 +9,8 @@ import { javascript } from "./data/js-data";
 import { react } from "./data/react-data";
 import { git } from "./data/git-data";
 
+const script = document.createElement("script");
+
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState("html");
   const [searchTerm, setSearchTerm] = useState("");
@@ -50,6 +52,14 @@ function App() {
     if (selectedLanguage === "javascript") setCheatSheets(() => javascript);
     if (selectedLanguage === "react") setCheatSheets(() => react);
     if (selectedLanguage === "git") setCheatSheets(() => git);
+
+    const wrapper = document.querySelector(".indieboost-wrapper");
+    script.setAttribute(
+      "src",
+      "https://cdn.indieboosting.com/latest/script.js?id=URID3T6X9I&maxProducts=10&title=Top Products - IndieBoosting"
+    );
+
+    wrapper.appendChild(script);
   }, [selectedLanguage]);
 
   return (
@@ -63,6 +73,7 @@ function App() {
         searchTerm={searchTerm}
       />
       <CheatSheets cheatsheets={cheatsheets} />
+      <div className="indieboost-wrapper"></div>
       <Footer />
     </>
   );

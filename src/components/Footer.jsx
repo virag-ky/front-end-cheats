@@ -29,10 +29,6 @@ function Footer() {
         </div>
       </div>
       <div className="footer-section">
-        <p>
-          For any feedback, please leave a message here:{" "}
-          <a href="mailto:vkormoczy@gmail.com">vkormoczy@gmail.com</a>.
-        </p>
         <div className="social-icons">
           <a href="https://github.com/virag-ky" target="_blank">
             <FaGithub size={25} />

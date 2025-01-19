@@ -157,13 +157,11 @@ main {
 
 /* Footer */
 footer {
-  background: #fff;
-  color: #2d2b57;
   display: flex;
   justify-content: center;
   gap: 5rem;
-  padding: 4rem 1rem 2rem 1rem;
-  height: 500px;
+  padding: 2rem 1rem 2rem 1rem;
+  height: 400px;
 }
 
 footer div.footer-section {
@@ -182,7 +180,7 @@ footer li {
 }
 
 footer a {
-  color: #210f5d;
+  color: #ab9bff;
   font-weight: 700;
 }
 
@@ -190,7 +188,7 @@ footer div.social-icons {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 1rem;
 }
 
@@ -267,8 +265,8 @@ a.coffee button {
   padding: 0.5rem 0.8rem;
   border: none;
   border-radius: 0.5rem;
-  background: #210f5d;
-  color: #fff;
+  background: #fff;
+  color: #210f5d;
   font-size: 1rem;
   transition: 0.5s;
 }

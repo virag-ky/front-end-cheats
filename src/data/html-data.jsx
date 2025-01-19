@@ -54,11 +54,11 @@ export const html = [
   {
     title: "Headings",
     text: `<h1>This is Heading 1 - Largest</h1>
-    <h2>This is Heading 2</h2>
-    <h3>This is Heading 3</h3>
-    <h4>This is Heading 4</h4>
-    <h5>This is Heading 5</h5>
-    <h6>This is Heading 6 - Smallest</h6>`,
+<h2>This is Heading 2</h2>
+<h3>This is Heading 3</h3>
+<h4>This is Heading 4</h4>
+<h5>This is Heading 5</h5>
+<h6>This is Heading 6 - Smallest</h6>`,
     language: "html",
     keypoints: `<ul>
         <li><strong>Hierarchy</strong>: The headings range from <code>&lt;h1&gt;</code> (the highest level) to <code>&lt;h6&gt;</code> (the lowest level), allowing for clear structural hierarchy in content.</li>
@@ -364,7 +364,7 @@ or
 <!-- Form with Button and Reset -->
 <form action="#">
     <label for="search">Search:</label>
-    <input type="text" id="search" name="search"><br><br>
+    <input type="text" id="search" name="search">
     <button type="submit">Search</button>
     <button type="reset">Reset</button>
 </form>
@@ -427,7 +427,7 @@ or
     title: "Forms - Textarea",
     text: `<!-- Textarea -->
 <form action="#">
-    <label for="comments">Comments:</label><br>
+    <label for="comments">Comments:</label>
     <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
     <input type="submit" value="Submit">
 </form>`,
@@ -458,7 +458,7 @@ or
     text: `<!-- File Upload -->
 <form action="#" method="post" enctype="multipart/form-data">
     <label for="file">Upload a file:</label>
-    <input type="file" id="file" name="file"><br><br>
+    <input type="file" id="file" name="file">
     <input type="submit" value="Submit">
 </form>`,
     language: "html",
@@ -497,8 +497,8 @@ or
   {
     title: "Div (Division Element)",
     text: `<!-- Basic Div Usage -->
-<div class="box">
-    This is a simple <div> for block-level content.
+<div>
+    This is a simple div for block-level content.
 </div>
 
 <!-- Div with Class for Styling -->
@@ -567,5 +567,96 @@ or
     <li><strong>Tooltips:</strong> The <code>title</code> attribute can be used for providing additional info on hover.</li>
 </ul>`,
     id: 16,
+  },
+  {
+    title: "Image Element - Img",
+    text: `<img src="image.jpg" alt="Description of image">
+
+<!-- Common attributes -->
+<img src="image.jpg" 
+     alt="Description"
+     width="300" 
+     height="200" 
+     loading="lazy" 
+     srcset="image-small.jpg 300w, image-large.jpg 600w"
+    sizes="(max-width: 300px) 100vw, 300px">
+
+<!-- With figure and figcaption -->
+<figure>
+  <img src="image.jpg" alt="Description of image">
+  <figcaption>Image caption goes here.</figcaption>
+</figure>
+    `,
+    language: "html",
+    keypoints: `<ul>
+  <li><strong>src</strong> - Specifies the path to the image.</li>
+  <li><strong>alt</strong> - Provides alternative text for accessibility.</li>
+  <li><strong>width</strong> - Sets the width of the image.</li>
+  <li><strong>height</strong> - Sets the height of the image.</li>
+  <li><strong>loading</strong> - Use 'lazy' for performance.</li>
+  <li><strong>srcset</strong> - Allows for responsive images by specifying different image sources.</li>
+  <li><strong>sizes</strong> - Helps in selecting the appropriate image from srcset based on viewport size.</li>
+  <li><strong>figure</strong> - Container for self-contained content like images, illustrations, diagrams, etc.</li>
+  <li><strong>figcaption</strong> - Provides a caption or legend for the content within a <code>figure</code> element.</li>
+  <li>Use <code>figure</code> for content that can be moved away from the main flow without affecting the document's meaning.</li>
+  <li><code>figcaption</code> can be the first or last child within <code>figure</code>.</li>
+</ul>`,
+    id: 17,
+  },
+  {
+    title: "ARIA Attributes",
+    text: `<!-- ARIA Live Regions -->
+<div aria-live="polite">Live updates here.</div>
+
+<!-- ARIA Labels -->
+<button aria-label="Close">X</button>
+<input type="text" aria-labelledby="nameLabel" placeholder="Name">
+<label id="nameLabel">Enter your name:</label>
+
+<!-- ARIA Roles -->
+<div role="dialog" aria-labelledby="dialogTitle" aria-describedby="dialogDesc">
+  <h2 id="dialogTitle">Dialog Title</h2>
+  <p id="dialogDesc">Dialog description.</p>
+</div>
+
+<!-- ARIA States and Properties -->
+<button aria-expanded="false">Expand Menu</button>
+<div role="tablist">
+  <button role="tab" aria-selected="true" aria-controls="panel1">Tab 1</button>
+  <div id="panel1" role="tabpanel" aria-labelledby="tab1">Content for tab 1</div>
+</button>
+
+<!-- ARIA for Form Elements -->
+<input type="checkbox" aria-checked="false" aria-label="Agree to terms">
+<select aria-required="true">
+  <option value="option1">Option 1</option>
+</select>
+
+<!-- ARIA for Landmarks -->
+<nav role="navigation" aria-label="Main Menu">
+  <ul>
+    <li><a href="#home">Home</a></li>
+  </ul>
+</nav>
+
+<!-- ARIA for Dynamic Content -->
+<div role="region" aria-relevant="additions" aria-live="assertive">
+  Dynamic content will be announced here.
+</div>`,
+    language: "html",
+    keypoints: `<ul>
+  <li><strong>aria-live</strong> - Announces dynamic content changes to screen readers.</li>
+  <li><strong>aria-label/aria-labelledby</strong> - Provides an accessible name for elements without visible text.</li>
+  <li><strong>role</strong> - Defines the role of an element for assistive technologies, like 'dialog', 'tab', or 'button'.</li>
+  <li><strong>aria-expanded</strong> - Indicates if an element is expandable or collapsible.</li>
+  <li><strong>aria-selected</strong> - Marks the current item as selected within a set.</li>
+  <li><strong>aria-controls</strong> - Identifies one or more elements controlled by another.</li>
+  <li><strong>aria-checked</strong> - Indicates the state of checkboxes or similar toggles.</li>
+  <li><strong>aria-required</strong> - Specifies that user input is mandatory for an element before form submission.</li>
+  <li><strong>aria-relevant</strong> - Determines what types of changes in a live region are to be announced.</li>
+  <li><strong>aria-assertive</strong> - Used with aria-live for immediate announcement of changes.</li>
+  <li>ARIA should enhance or repair native semantics, not replace them.</li>
+</ul>`,
+    id: 18,
   },
 ];

@@ -1,8 +1,21 @@
-# React + Vite
+# FrontEndCheats
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A collection of front-end cheat sheets for web developers.
 
-Currently, two official plugins are available:
+The current topics are available: HTML, CSS, JavaScript, React, and Git.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live link: https://frontendcheats.netlify.app/
+
+## 🛠 Built with:
+
+- React
+
+  - [React icons](https://react-icons.github.io/react-icons/)
+  - [html-react-parser](https://www.npmjs.com/package/html-react-parser)
+  - [react-code-blocks](https://www.npmjs.com/package/react-code-blocks)
+
+- CSS
+
+## ❗ Issues:
+
+For any issues, please create a new issue, I will try to address it as soon as possible.

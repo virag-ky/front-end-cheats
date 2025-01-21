@@ -6,6 +6,8 @@ The current topics are available: HTML, CSS, JavaScript, React, and Git.
 
 Live link: https://frontendcheats.netlify.app/
 
+<img width="2025" alt="Screenshot 2025-01-21 at 12 48 46" src="https://github.com/user-attachments/assets/e5cd2b21-3e47-4835-ab8f-f5827ac73d0a" />
+
 ## 🛠 Built with:
 
 - React

@@ -39,6 +39,28 @@ nav {
   font-weight: 500;
 }
 
+.github-repo {
+  text-decoration: none;
+}
+
+.github-repo button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  background: #210f5d;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  transition: 0.5s;
+}
+
+.github-repo button:hover {
+  background: #ab9bff;
+  color: #2d2b57;
+}
+
 /* Header */
 header {
   height: 80vh;

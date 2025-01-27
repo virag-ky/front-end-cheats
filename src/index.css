@@ -288,13 +288,16 @@ a.coffee button:hover {
 }
 
 /* Media queries */
-@media (max-width: 700px) {
-  .cheatsheet {
-    border-width: 0.5rem;
-  }
-}
 
 @media (max-width: 700px) {
+  .cheatsheet-container {
+    gap: 5rem;
+  }
+
+  .cheatsheet {
+    height: 350px;
+  }
+
   footer {
     flex-direction: column;
   }

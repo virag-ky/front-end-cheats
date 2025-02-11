@@ -13,20 +13,6 @@ function Footer() {
             Virag Kormoczy
           </a>
         </p>
-        <div>
-          <p>💜 Consider supporting the project?</p>
-          <ul>
-            <li>Further development</li>
-            <li>Custom domain name</li>
-          </ul>
-          <a
-            className="coffee"
-            href="https://buymeacoffee.com/virag"
-            target="_blank"
-          >
-            <button>☕️ Buy me a coffee</button>
-          </a>
-        </div>
       </div>
       <div className="footer-section">
         <div className="social-icons">

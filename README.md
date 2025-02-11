@@ -4,7 +4,7 @@ A collection of front-end cheat sheets for web developers.
 
 The current topics are available: HTML, CSS, JavaScript, React, and Git.
 
-Live link: https://frontendcheats.netlify.app/
+Live link: https://frontendcheats.com/
 
 <img width="2025" alt="Screenshot 2025-01-21 at 12 48 46" src="https://github.com/user-attachments/assets/e5cd2b21-3e47-4835-ab8f-f5827ac73d0a" />
 
@@ -28,29 +28,41 @@ You will need basic skills in Git and the command line (e.g. directory navigatio
 
 1. Fork this repository
 2. Clone the forked repository
+
 ```
 git clone https://github.com/your-username/your-repo-name.git
 ```
+
 3. Change directory to the newly cloned repo
+
 ```
 cd your-repo-name
 ```
+
 5. Add the original repository as an upstream remote so you can fetch updates
+
 ```
 git remote add upstream https://github.com/original-owner/original-repo-name.git
 ```
+
 5. Create a new branch / Always work in a new branch for contributions
+
 ```
 git checkout -b feature-branch-name
 ```
+
 6. Install the dependencies
+
 ```
 npm install
 ```
+
 7. Run the project
+
 ```
 npm run dev
 ```
+
 8. Make your changes
    - go to the src/data folder and select the file where you want to add cheat sheets (in the html-data.jsx you add HTML cheat sheets and so on)
    - go to the end of the file you picked and add a new object in the array
@@ -71,18 +83,24 @@ npm run dev
    </li>
    ```
    - make sure you have no errors and the cheat sheet appears correctly in the browser
- 9. Stage your changes
+9. Stage your changes
+
 ```
 git add .
 ```
+
 10. Commit your changes / Add a descriptive commit message (e.g "Add HTML list elements cheat sheet")
+
 ```
 git commit -m "message"
 ```
+
 11. Push your branch to your forked repository
+
 ```
 git push origin feature-branch-name
 ```
+
 12. Create a pull request
     - go to your fork on GitHub
     - click on "New pull request"
@@ -95,13 +113,16 @@ git push origin feature-branch-name
 14. Wait for merging
     - once your pull request is accepted, it will be merged into the main project
 
-   
 > Keep your branch updated if needed:
+
 - fetch the latest changes from the upstream repo
+
 ```
 git fetch upstream
 ```
+
 - merge these changes into your branch
+
 ```
 git merge upstream/main  # or upstream/master, depending on the main branch name
 ```

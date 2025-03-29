@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="content-language" content="en" />
     <link rel="icon" type="image/svg+xml" href="/icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta
       name="description"
       content="Explore a curated collection of frontend cheat sheets for HTML, CSS, JS, React, and more &ndash; perfect for web developers."
@@ -28,7 +30,10 @@
       name="twitter:description"
       content="A collection of frontend cheat sheets for web developers."
     />
-    <meta name="twitter:image" content="/preview.png" />
+    <meta
+      name="twitter:image"
+      content="https://frontendcheats.com/preview.png"
+    />
     <meta name="robots" content="index, follow" />
 
     <title>FrontEndCheats</title>
@@ -38,6 +43,23 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "FrontEndCheats",
+        "description": "A collection of frontend cheat sheets for web developers.",
+        "url": "https://frontendcheats.com/",
+        "author": {
+          "@type": "Person",
+          "name": "Virag Kormoczy"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "FrontEndCheats"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

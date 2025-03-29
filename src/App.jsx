@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { IndieBoosting } from "@indieboosting/react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import CheatSheets from "./components/CheatSheets";
@@ -64,13 +63,6 @@ function App() {
         searchTerm={searchTerm}
       />
       <CheatSheets cheatsheets={cheatsheets} />
-      <div className="indieboost-wrapper">
-        <IndieBoosting
-          id="URID3T6X9I"
-          title="Top Products - IndieBoosting"
-          permanent
-        />
-      </div>
       <Footer />
     </>
   );

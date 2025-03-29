@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@indieboosting/react": "^1.4.0",
     "html-react-parser": "^5.2.2",
     "react": "^18.3.1",
     "react-code-blocks": "^0.1.6",

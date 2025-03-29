@@ -5,7 +5,7 @@ import parse from "html-react-parser";
 function CheatSheet({ sheet }) {
   return (
     <section className="cheatsheet">
-      <h3>{sheet.title}</h3>
+      <h2>{sheet.title}</h2>
       <CopyBlock
         text={sheet.text}
         language={sheet.language}

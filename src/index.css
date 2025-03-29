@@ -155,7 +155,7 @@ main {
   overflow-y: scroll;
 }
 
-.cheatsheet h3 {
+.cheatsheet h2 {
   margin-bottom: 1rem;
 }
 
@@ -202,7 +202,7 @@ footer li {
 }
 
 footer a {
-  color: #ab9bff;
+  color: #c9beff;
   font-weight: 700;
 }
 

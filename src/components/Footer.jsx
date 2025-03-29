@@ -22,9 +22,6 @@ function Footer() {
           <a href="https://x.com/Virag_Ky" target="_blank">
             <FaXTwitter size={25} />
           </a>
-          <a href="https://www.linkedin.com/in/virag-kormoczy/" target="_blank">
-            <FaLinkedin size={25} />
-          </a>
           <a
             href="https://bsky.app/profile/virag-ky.bsky.social"
             target="_blank"

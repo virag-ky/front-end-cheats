@@ -574,4 +574,245 @@ git am --continue
 </ul>`,
     id: 406,
   },
+  {
+    title: "Working with Remotes",
+    text: `*** Viewing remotes ***
+# List remote repositories
+git remote
+
+# List remotes with URLs
+git remote -v
+
+*** Adding and removing remotes ***
+
+# Add a new remote
+git remote add origin <remote-url>
+
+# Rename a remote
+git remote rename origin upstream
+
+# Remove a remote
+git remote remove origin
+
+*** Updating remote URLs ***
+
+# Change remote URL
+git remote set-url origin <new-remote-url>
+
+# Verify updated remote
+git remote -v
+
+*** Fetching and pulling ***
+
+# Fetch changes from remote without merging
+git fetch origin
+
+# Fetch a specific branch
+git fetch origin <branch-name>
+
+# Pull changes (fetch + merge)
+git pull origin main
+
+# Pull with rebase instead of merge
+git pull --rebase origin main
+`,
+    language: "bash",
+    keypoints: `<ul>
+    <li>View remotes using <code>git remote -v</code></li>
+    <li>Add a remote repository with <code>git remote add</code></li>
+    <li>Rename or remove remotes easily</li>
+    <li><code>git fetch</code> downloads changes without merging</li>
+    <li><code>git pull</code> fetches and merges remote changes</li>
+    <li>Rebase remote changes with <code>git pull --rebase</code></li>
+  </ul>`,
+    id: 407,
+  },
+  {
+    title: "Stashing Changes",
+    text: `*** Creating stashes ***
+# Save uncommitted changes
+git stash
+
+# Save stash with a message
+git stash save "Work in progress"
+
+# Stash only tracked files
+git stash push -m "Tracked only" --keep-index
+
+*** Viewing stashes ***
+
+# List all stashes
+git stash list
+
+# Show details of latest stash
+git stash show
+
+# Show full diff of a stash
+git stash show -p stash@{0}
+
+*** Applying stashes ***
+
+# Apply the latest stash
+git stash apply
+
+# Apply a specific stash
+git stash apply stash@{1}
+
+# Apply and remove stash
+git stash pop
+
+*** Removing stashes ***
+
+# Drop a specific stash
+git stash drop stash@{0}
+
+# Clear all stashes
+git stash clear
+`,
+    language: "bash",
+    keypoints: `<ul>
+    <li>Stash uncommitted work using <code>git stash</code></li>
+    <li>List all stashes with <code>git stash list</code></li>
+    <li>Apply stashed changes with <code>git stash apply</code></li>
+    <li>Apply and delete stash using <code>git stash pop</code></li>
+    <li>Remove unused stashes with <code>git stash drop</code></li>
+  </ul>`,
+    id: 408,
+  },
+  {
+    title: "Tags and Releases",
+    text: `*** Creating tags ***
+# Create a lightweight tag
+git tag v1.0.0
+
+# Create an annotated tag
+git tag -a v1.0.0 -m "Version 1.0.0"
+
+# Tag a specific commit
+git tag v1.0.1 <commit-id>
+
+*** Viewing tags ***
+
+# List all tags
+git tag
+
+# Show tag details
+git show v1.0.0
+
+*** Pushing tags ***
+
+# Push a single tag
+git push origin v1.0.0
+
+# Push all tags
+git push origin --tags
+
+*** Deleting tags ***
+
+# Delete local tag
+git tag -d v1.0.0
+
+# Delete remote tag
+git push origin --delete v1.0.0
+`,
+    language: "bash",
+    keypoints: `<ul>
+    <li>Tags mark important points like releases</li>
+    <li>Annotated tags store metadata and messages</li>
+    <li>View tags using <code>git tag</code></li>
+    <li>Push tags separately to remote repositories</li>
+    <li>Delete tags locally and remotely when needed</li>
+  </ul>`,
+    id: 409,
+  },
+  {
+    title: "Undoing Mistakes",
+    text: `*** Undoing working directory changes ***
+# Discard changes in a file
+git checkout -- <file>
+
+# Restore file using new command
+git restore <file>
+
+*** Undoing staged changes ***
+
+# Unstage a file
+git restore --staged <file>
+
+# Unstage all files
+git restore --staged .
+
+*** Undoing commits ***
+
+# Undo last commit but keep changes
+git reset --soft HEAD~1
+
+# Undo last commit and unstage changes
+git reset --mixed HEAD~1
+
+# Undo last commit and discard changes (dangerous)
+git reset --hard HEAD~1
+
+*** Reverting commits ***
+
+# Create a new commit that reverts changes
+git revert <commit-id>
+`,
+    language: "bash",
+    keypoints: `<ul>
+    <li>Discard local changes with <code>git restore</code></li>
+    <li>Unstage files without losing work</li>
+    <li>Soft reset keeps changes safe</li>
+    <li>Hard reset permanently deletes changes</li>
+    <li><code>git revert</code> is safe for shared branches</li>
+  </ul>`,
+    id: 410,
+  },
+  {
+    title: "Git Workflows",
+    text: `*** Feature branch workflow ***
+# Create a feature branch
+git checkout -b feature/login
+
+# Work and commit changes
+git commit -m "Add login feature"
+
+# Merge feature branch into main
+git checkout main
+git merge feature/login
+
+*** Gitflow basics ***
+# Main branches
+main        # production-ready code
+develop     # integration branch
+
+# Supporting branches
+feature/*   # new features
+release/*   # prepare releases
+hotfix/*    # production fixes
+
+*** Rebase workflow ***
+# Rebase feature branch on main
+git checkout feature/login
+git rebase main
+
+# Resolve conflicts and continue
+git rebase --continue
+
+*** Best practices ***
+# Pull before pushing
+git pull --rebase
+
+# Keep commits small and meaningful
+`,
+    language: "bash",
+    keypoints: `<ul>
+    <li>Feature branches isolate new development</li>
+    <li>Gitflow defines structured branching rules</li>
+    <li>Rebasing keeps history clean</li>
+    <li>Hotfix branches handle urgent production bugs</li>
+    <li>Consistent workflows improve team collaboration</li>
+  </ul>`,
+    id: 411,
+  },
 ];

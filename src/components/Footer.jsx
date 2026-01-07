@@ -17,31 +17,6 @@ function Footer() {
           </a>
         </p>
       </div>
-      <div className="footer-section">
-        <div className="social-icons">
-          <a
-            href="https://github.com/virag-ky"
-            aria-label="Go to Virag Kormoczy GitHub page"
-            target="_blank"
-          >
-            <FaGithub size={25} />
-          </a>
-          <a
-            href="https://x.com/Virag_Ky"
-            aria-label="Go to Virag Kormoczy X/Twitter page"
-            target="_blank"
-          >
-            <FaXTwitter size={25} />
-          </a>
-          <a
-            href="https://bsky.app/profile/virag-ky.bsky.social"
-            aria-label="Go to Virag Kormoczy BlueSky page"
-            target="_blank"
-          >
-            <FaBluesky size={25} />
-          </a>
-        </div>
-      </div>
     </footer>
   );
 }

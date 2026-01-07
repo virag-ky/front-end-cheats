@@ -3054,4 +3054,155 @@ video.addEventListener('pause', function() {
 </ul>`,
     id: 227,
   },
+  {
+    title: "Error Handling",
+    text: `// Basic try...catch
+try {
+  riskyFunction();
+} catch (error) {
+  console.error("Error occurred:", error.message);
+} finally {
+  console.log("Always runs");
+}
+
+// Throw custom errors
+if (!user) {
+  throw new Error("User not found");
+}
+
+// Custom Error Class
+class ValidationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "ValidationError";
+  }
+}
+throw new ValidationError("Invalid input");`,
+    language: "javascript",
+    keypoints: `<ul>
+    <li>Use <code>try</code> to wrap code that might throw errors</li>
+    <li><code>catch</code> handles thrown errors gracefully</li>
+    <li><code>finally</code> always executes, regardless of success</li>
+    <li><code>throw</code> creates user-defined error conditions</li>
+    <li>Custom error classes extend <code>Error</code></li>
+  </ul>`,
+    id: 228,
+  },
+  {
+    title: "Closures",
+    text: `// Basic Closure Example
+function createCounter() {
+  let count = 0;
+  return function () {
+    count++;
+    return count;
+  };
+}
+
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+
+// Closure with parameters
+function makeAdder(x) {
+  return function (y) {
+    return x + y;
+  };
+}
+const addFive = makeAdder(5);
+console.log(addFive(10)); // 15`,
+    language: "javascript",
+    keypoints: `<ul>
+    <li>A closure is a function that retains access to its lexical scope even when invoked outside</li>
+    <li>Useful for data encapsulation and preserving state</li>
+    <li>Can be used to create private variables</li>
+    <li>Common in advanced patterns like factories and modules</li>
+  </ul>`,
+    id: 229,
+  },
+  {
+    title: "Event Loop & Async Model",
+    text: `// Synchronous example
+console.log("Start");
+console.log("End");
+
+// Asynchronous example
+setTimeout(() => console.log("Timeout"), 0);
+
+Promise.resolve().then(() => console.log("Promise resolved"));
+
+// Execution order:
+// "Start"
+// "End"
+// "Promise resolved" (Microtask Queue)
+// "Timeout" (Callback Queue)`,
+    language: "javascript",
+    keypoints: `<ul>
+    <li>JavaScript is single-threaded but handles async via the event loop</li>
+    <li>Microtasks (Promises) run before callback queue (timers)</li>
+    <li>Understanding this is crucial for async behavior in real apps</li>
+    <li>Explains why <code>setTimeout(..., 0)</code> doesn’t execute immediately</li>
+  </ul>`,
+    id: 230,
+  },
+  {
+    title: "Fetch API",
+    text: `// Basic GET request
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+// Async/await
+async function getData() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+getData();`,
+    language: "javascript",
+    keypoints: `<ul>
+    <li><code>fetch()</code> initiates a network request</li>
+    <li><code>.then()</code> handles promise responses</li>
+    <li><code>async/await</code> simplifies asynchronous syntax</li>
+    <li><code>.catch()</code> helps handle request failures</li>
+  </ul>`,
+    id: 231,
+  },
+  {
+    title: "DOM Manipulation",
+    text: `// Selecting elements
+const heading = document.querySelector('h1');
+const listItems = document.getElementsByTagName('li');
+
+// Updating content
+heading.textContent = "Updated Title";
+heading.style.color = "blue";
+
+// Creating elements
+const newLi = document.createElement('li');
+newLi.textContent = "New list item";
+document.body.appendChild(newLi);
+
+// Removing elements
+newLi.remove();
+
+// Class list manipulation
+heading.classList.add('highlight');
+heading.classList.remove('highlight');`,
+    language: "javascript",
+    keypoints: `<ul>
+    <li><code>querySelector()</code> and <code>getElementsBy*</code> select DOM nodes</li>
+    <li>Text and styling can be changed dynamically</li>
+    <li>Elements can be created and inserted</li>
+    <li>Elements can be removed from the DOM</li>
+    <li>CSS classes can be toggled via <code>classList</code></li>
+  </ul>`,
+    id: 232,
+  },
 ];

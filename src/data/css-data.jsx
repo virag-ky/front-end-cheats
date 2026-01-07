@@ -1261,4 +1261,167 @@ background:
 </ul>`,
     id: 125,
   },
+  {
+    title: "CSS Variables (Custom Properties)",
+    text: `/* Declaring variables */
+:root {
+  --primary-color: #3498db;
+  --spacing-unit: 16px;
+  --border-radius: 8px;
+}
+
+/* Using variables */
+.card {
+  background-color: var(--primary-color);
+  padding: var(--spacing-unit);
+  border-radius: var(--border-radius);
+}
+
+/* Fallback value */
+.button {
+  color: var(--text-color, black);
+}
+
+/* Updating variables */
+.dark-theme {
+  --primary-color: #1abc9c;
+}`,
+    language: "css",
+    keypoints: `<ul>
+    <li><strong>Custom Properties</strong>: Defined using <code>--variable-name</code>.</li>
+    <li><strong>:root</strong>: Common place to define global variables.</li>
+    <li><strong>var()</strong>: Used to access variable values.</li>
+    <li><strong>Fallback Values</strong>: Provide default values if variable is undefined.</li>
+    <li><strong>Dynamic Theming</strong>: Variables can be updated at runtime using classes.</li>
+  </ul>`,
+    id: 125,
+  },
+  {
+    title: "Box Model",
+    text: `/* Box Model Components */
+.box {
+  width: 200px;
+  height: 100px;
+
+  padding: 20px;
+  border: 5px solid black;
+  margin: 15px;
+}
+
+/* Box Sizing */
+.content-box {
+  box-sizing: content-box; /* Default */
+}
+
+.border-box {
+  box-sizing: border-box; /* Includes padding and border in width/height */
+}`,
+    language: "css",
+    keypoints: `<ul>
+    <li><strong>Content</strong>: Actual content area.</li>
+    <li><strong>Padding</strong>: Space between content and border.</li>
+    <li><strong>Border</strong>: Surrounds padding and content.</li>
+    <li><strong>Margin</strong>: Space outside the border.</li>
+    <li><strong>box-sizing</strong>: Controls how width and height are calculated.</li>
+  </ul>`,
+    id: 126,
+  },
+  {
+    title: "Overflow Handling",
+    text: `/* Overflow property */
+.container {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+/* Individual axes */
+.scroll-x {
+  overflow-x: scroll;
+}
+
+.scroll-y {
+  overflow-y: auto;
+}
+
+/* Text overflow */
+.text {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}`,
+    language: "css",
+    keypoints: `<ul>
+    <li><strong>overflow</strong>: Controls content spilling outside the box.</li>
+    <li><strong>hidden</strong>: Clips overflowing content.</li>
+    <li><strong>scroll</strong>: Always shows scrollbars.</li>
+    <li><strong>auto</strong>: Shows scrollbars only when needed.</li>
+    <li><strong>text-overflow</strong>: Handles clipped text with ellipsis.</li>
+  </ul>`,
+    id: 127,
+  },
+  {
+    title: "CSS Transitions",
+    text: `/* Basic Transition */
+.button {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: green;
+}
+
+/* Multiple properties */
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}`,
+    language: "css",
+    keypoints: `<ul>
+    <li><strong>transition-property</strong>: Property to animate.</li>
+    <li><strong>transition-duration</strong>: Time taken for transition.</li>
+    <li><strong>transition-timing-function</strong>: Speed curve of transition.</li>
+    <li><strong>transition-delay</strong>: Delay before transition starts.</li>
+    <li><strong>Hover Effects</strong>: Commonly used for interactive UI.</li>
+  </ul>`,
+    id: 128,
+  },
+  {
+    title: "Object Fit & Object Position",
+    text: `/* Object Fit */
+.image-cover {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.image-contain {
+  object-fit: contain;
+}
+
+.image-fill {
+  object-fit: fill;
+}
+
+/* Object Position */
+.image-position {
+  object-fit: cover;
+  object-position: top center;
+}`,
+    language: "css",
+    keypoints: `<ul>
+    <li><strong>object-fit</strong>: Controls how media fits inside its container.</li>
+    <li><strong>cover</strong>: Fills container while preserving aspect ratio.</li>
+    <li><strong>contain</strong>: Fits entire media inside container.</li>
+    <li><strong>fill</strong>: Stretches media to fill container.</li>
+    <li><strong>object-position</strong>: Controls alignment of media within container.</li>
+  </ul>`,
+    id: 129,
+  },
 ];

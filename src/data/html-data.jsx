@@ -659,4 +659,132 @@ or
 </ul>`,
     id: 18,
   },
+  {
+    title: "Semantic HTML Elements",
+    text: `<!-- Common Semantic Elements -->
+<header>
+  <h1>Website Header</h1>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+</nav>
+
+<section>
+  <h2>Section Title</h2>
+  <p>Related content grouped together.</p>
+</section>
+
+<article>
+  <h3>Blog Post</h3>
+  <p>This is an independent piece of content.</p>
+</article>
+
+<aside>
+  <p>Sidebar or related info.</p>
+</aside>
+
+<footer>
+  <p>© 2026 My Website</p>
+</footer>`,
+    language: "html",
+    keypoints: `<ul>
+    <li><strong>Meaningful Structure:</strong> Semantic elements describe their purpose clearly.</li>
+    <li><strong>Accessibility:</strong> Screen readers understand page layout better.</li>
+    <li><strong>SEO:</strong> Search engines prioritize semantic structure.</li>
+    <li><strong>&lt;section&gt;</strong>: Groups related thematic content.</li>
+    <li><strong>&lt;article&gt;</strong>: Self-contained, reusable content.</li>
+    <li><strong>&lt;aside&gt;</strong>: Supplementary or sidebar content.</li>
+  </ul>`,
+    id: 19,
+  },
+  {
+    title: "Audio Element",
+    text: `<!-- Basic Audio -->
+<audio controls>
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Autoplay & Loop -->
+<audio src="audio.mp3" controls autoplay loop></audio>`,
+    language: "html",
+    keypoints: `<ul>
+    <li><strong>&lt;audio&gt;</strong>: Embeds sound content.</li>
+    <li><strong>controls</strong>: Displays play, pause, volume.</li>
+    <li><strong>autoplay</strong>: Starts audio automatically (often restricted).</li>
+    <li><strong>loop</strong>: Repeats audio continuously.</li>
+    <li><strong>source</strong>: Allows multiple audio formats.</li>
+  </ul>`,
+    id: 20,
+  },
+  {
+    title: "Video Element",
+    text: `<!-- Basic Video -->
+<video controls width="400">
+  <source src="video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<!-- Video with Poster -->
+<video controls poster="thumbnail.jpg" width="400">
+  <source src="video.mp4" type="video/mp4">
+</video>`,
+    language: "html",
+    keypoints: `<ul>
+    <li><strong>&lt;video&gt;</strong>: Embeds video content.</li>
+    <li><strong>controls</strong>: Shows playback controls.</li>
+    <li><strong>poster</strong>: Thumbnail image before playback.</li>
+    <li><strong>width/height</strong>: Controls video dimensions.</li>
+    <li><strong>Accessibility:</strong> Use captions for better usability.</li>
+  </ul>`,
+    id: 21,
+  },
+  {
+    title: "Meta Tags (SEO & Performance)",
+    text: `<!-- SEO Meta Tags -->
+<meta name="description" content="Learn HTML basics with examples.">
+<meta name="keywords" content="HTML, Web Development, Frontend">
+<meta name="author" content="Abdul Wahab">
+
+<!-- Performance & Compatibility -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">`,
+    language: "html",
+    keypoints: `<ul>
+    <li><strong>Description:</strong> Appears in search engine results.</li>
+    <li><strong>Keywords:</strong> Helps categorize content (less impactful today).</li>
+    <li><strong>Author:</strong> Identifies content creator.</li>
+    <li><strong>Viewport:</strong> Essential for responsive design.</li>
+    <li><strong>Compatibility:</strong> Ensures browser rendering consistency.</li>
+  </ul>`,
+    id: 22,
+  },
+  {
+    title: "HTML Comments & Best Practices",
+    text: `<!-- This is a single-line comment -->
+
+<!--
+  This is a
+  multi-line comment
+-->
+
+<!-- Commenting sections -->
+<header>
+  <!-- Logo and navigation -->
+</header>
+
+<!-- Temporary code removal -->
+<!-- <p>This paragraph is disabled</p> -->`,
+    language: "html",
+    keypoints: `<ul>
+    <li><strong>Syntax:</strong> Comments start with &lt;!-- and end with --&gt;.</li>
+    <li><strong>Documentation:</strong> Helps explain complex markup.</li>
+    <li><strong>Debugging:</strong> Temporarily disable elements.</li>
+    <li><strong>Best Practice:</strong> Avoid excessive comments in production.</li>
+    <li><strong>Visibility:</strong> Comments are not rendered on the page.</li>
+  </ul>`,
+    id: 23,
+  },
 ];

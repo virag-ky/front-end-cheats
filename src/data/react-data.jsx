@@ -421,4 +421,212 @@ export default UseStateExample;`,
 </ul>`,
     id: 306,
   },
+  {
+    title: "useEffect()",
+    text: `import React, { useEffect, useState } from 'react';
+
+const UseEffectExample = () => {
+    const [count, setCount] = useState(0);
+    const [data, setData] = useState(null);
+
+    // Runs after every render
+    useEffect(() => {
+        console.log('Component rendered');
+    });
+
+    // Runs only once (on mount)
+    useEffect(() => {
+        console.log('Component mounted');
+    }, []);
+
+    // Runs when count changes
+    useEffect(() => {
+        document.title = \`Count: \${count}\`;
+    }, [count]);
+
+    // Cleanup effect
+    useEffect(() => {
+        const timer = setInterval(() => {
+            console.log('Running...');
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+    );
+};
+
+export default UseEffectExample;`,
+    language: "javascript",
+    keypoints: `<ul>
+    <li><code>useEffect</code> handles side effects in functional components</li>
+    <li>Runs after render by default</li>
+    <li>Dependency array controls when the effect runs</li>
+    <li>Empty dependency array runs effect once (componentDidMount)</li>
+    <li>Cleanup function prevents memory leaks</li>
+  </ul>`,
+    id: 307,
+  },
+  {
+    title: "Controlled vs Uncontrolled Components",
+    text: `import React, { useRef, useState } from 'react';
+
+// Controlled Component
+const ControlledForm = () => {
+    const [name, setName] = useState('');
+
+    return (
+        <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Controlled input"
+        />
+    );
+};
+
+// Uncontrolled Component
+const UncontrolledForm = () => {
+    const inputRef = useRef();
+
+    const handleSubmit = () => {
+        alert(inputRef.current.value);
+    };
+
+    return (
+        <>
+            <input ref={inputRef} placeholder="Uncontrolled input" />
+            <button onClick={handleSubmit}>Submit</button>
+        </>
+    );
+};
+
+export { ControlledForm, UncontrolledForm };`,
+    language: "javascript",
+    keypoints: `<ul>
+    <li>Controlled components use React state</li>
+    <li>Input value is driven by state</li>
+    <li>Uncontrolled components rely on the DOM</li>
+    <li><code>useRef</code> is used to access DOM elements</li>
+    <li>Controlled forms provide better validation and control</li>
+  </ul>`,
+    id: 308,
+  },
+  {
+    title: "useContext()",
+    text: `import React, { createContext, useContext } from 'react';
+
+// Create Context
+const ThemeContext = createContext();
+
+// Provider Component
+const ThemeProvider = ({ children }) => {
+    return (
+        <ThemeContext.Provider value="dark">
+            {children}
+        </ThemeContext.Provider>
+    );
+};
+
+// Consumer Component
+const ThemeConsumer = () => {
+    const theme = useContext(ThemeContext);
+    return <p>Current theme: {theme}</p>;
+};
+
+const App = () => (
+    <ThemeProvider>
+        <ThemeConsumer />
+    </ThemeProvider>
+);
+
+export default App;`,
+    language: "javascript",
+    keypoints: `<ul>
+    <li><code>createContext</code> creates a global state container</li>
+    <li><code>useContext</code> consumes context values</li>
+    <li>Avoids prop drilling</li>
+    <li>Best for themes, auth, and global configs</li>
+    <li>Must be wrapped with a Provider</li>
+  </ul>`,
+    id: 309,
+  },
+  {
+    title: "useRef()",
+    text: `import React, { useRef } from 'react';
+
+const UseRefExample = () => {
+    const inputRef = useRef(null);
+    const renderCount = useRef(0);
+
+    renderCount.current += 1;
+
+    const focusInput = () => {
+        inputRef.current.focus();
+    };
+
+    return (
+        <div>
+            <input ref={inputRef} />
+            <button onClick={focusInput}>Focus Input</button>
+            <p>Render Count: {renderCount.current}</p>
+        </div>
+    );
+};
+
+export default UseRefExample;`,
+    language: "javascript",
+    keypoints: `<ul>
+    <li><code>useRef</code> persists values without re-rendering</li>
+    <li>Commonly used for DOM access</li>
+    <li>Does not trigger component re-render</li>
+    <li>Useful for timers, counters, and previous values</li>
+  </ul>`,
+    id: 310,
+  },
+  {
+    title: "Memoization (memo, useMemo, useCallback)",
+    text: `import React, { memo, useCallback, useMemo, useState } from 'react';
+
+// memo prevents unnecessary re-renders
+const Child = memo(({ onClick }) => {
+    console.log('Child rendered');
+    return <button onClick={onClick}>Click</button>;
+});
+
+const MemoExample = () => {
+    const [count, setCount] = useState(0);
+
+    const expensiveCalculation = useMemo(() => {
+        return count * 1000;
+    }, [count]);
+
+    const handleClick = useCallback(() => {
+        console.log('Clicked');
+    }, []);
+
+    return (
+        <div>
+            <p>Value: {expensiveCalculation}</p>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+            <Child onClick={handleClick} />
+        </div>
+    );
+};
+
+export default MemoExample;`,
+    language: "javascript",
+    keypoints: `<ul>
+    <li><code>React.memo</code> prevents re-render if props don't change</li>
+    <li><code>useMemo</code> memoizes expensive calculations</li>
+    <li><code>useCallback</code> memoizes functions</li>
+    <li>Improves performance in large applications</li>
+    <li>Avoid premature optimization</li>
+  </ul>`,
+    id: 311,
+  },
 ];
